@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="km">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +8,63 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Kantumruy Pro', sans-serif; overflow-x: hidden; }
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        #sidebar { transition: transform 0.3s ease-in-out; }
-        .sidebar-overlay { transition: opacity 0.3s ease-in-out; }
+        body {
+            font-family: 'Kantumruy Pro', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        #sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar-overlay {
+            transition: opacity 0.3s ease-in-out;
+        }
     </style>
 </head>
+
 <body class="bg-gray-50 pb-32">
 
-    <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none sidebar-overlay"></div>
-    
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none sidebar-overlay">
+    </div>
+
     <aside id="sidebar" class="fixed top-0 left-0 w-[280px] h-full bg-white z-[70] shadow-2xl p-6 -translate-x-full">
         <div class="flex justify-between items-center mb-10">
             <h2 class="text-xl font-bold text-blue-600">ចុងសប្តាហ៍.KH</h2>
             <button onclick="toggleMenu()" class="p-2 text-gray-500 hover:bg-gray-100 rounded-full">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
             </button>
         </div>
         <nav class="space-y-6">
             <a href="index.html" class="flex items-center gap-4 text-blue-600 font-bold"><span>🏠</span> ទំព័រដើម</a>
-            <a href="places.html" class="flex items-center gap-4 text-gray-600 hover:text-blue-600 transition"><span>📍</span> កន្លែងដើរលេង</a>
-            <a href="savePlace.html" class="flex items-center gap-4 text-gray-600 hover:text-blue-600 transition"><span>❤️</span> កន្លែងដែលចូលចិត្ត</a>
-            <a href="profile.html" class="flex items-center gap-4 text-gray-600 hover:text-blue-600 transition"><span>👤</span> គណនី</a>
+            <a href="places.html"
+                class="flex items-center gap-4 text-gray-600 hover:text-blue-600 transition"><span>📍</span>
+                កន្លែងដើរលេង</a>
+            <a href="savePlace.html"
+                class="flex items-center gap-4 text-gray-600 hover:text-blue-600 transition"><span>❤️</span>
+                កន្លែងដែលចូលចិត្ត</a>
+            <a href="profile.html"
+                class="flex items-center gap-4 text-gray-600 hover:text-blue-600 transition"><span>👤</span> គណនី</a>
             <hr class="border-gray-100">
             <a href="about.html" class="flex items-center gap-4 text-gray-600 text-sm"><span>ℹ️</span> អំពីពួកយើង</a>
         </nav>
     </aside>
 
     <div class="max-w-7xl mx-auto">
-        
+
         <nav class="flex items-center justify-between px-6 py-4 bg-white sticky top-0 z-50 shadow-sm">
             <h1 class="text-2xl font-bold text-blue-600 tracking-tight">ចុងសប្តាហ៍</h1>
-            <button onclick="toggleMenu()" class="p-2 text-gray-700 active:scale-90 transition hover:bg-gray-100 rounded-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button onclick="toggleMenu()"
+                class="p-2 text-gray-700 active:scale-90 transition hover:bg-gray-100 rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
@@ -47,9 +72,12 @@
 
         <section class="mt-6 px-6">
             <div class="relative h-44 md:h-64 lg:h-80 rounded-[30px] overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?auto=format&fit=crop&w=1200&q=80" class="absolute inset-0 w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent p-6 md:p-12 flex flex-col justify-center">
-                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">រកកន្លែង Chill <br class="hidden md:block">សាហាវៗ! 🔥</h2>
+                <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?auto=format&fit=crop&w=1200&q=80"
+                    class="absolute inset-0 w-full h-full object-cover">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/20 to-transparent p-6 md:p-12 flex flex-col justify-center">
+                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">រកកន្លែង Chill <br
+                            class="hidden md:block">សាហាវៗ! 🔥</h2>
                 </div>
             </div>
         </section>
@@ -59,27 +87,42 @@
                 <h2 class="text-xl font-bold text-gray-800">ស្វែងរកតាមចំណូលចិត្ត</h2>
             </div>
             <div class="flex overflow-x-auto gap-3 px-6 hide-scrollbar lg:justify-start">
-                <button class="flex-none px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-bold shadow-md shadow-blue-100">ទាំងអស់</button>
-                <button class="flex-none px-6 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-sm hover:border-blue-400 transition">☕️ កាហ្វេ</button>
-                <button class="flex-none px-6 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-sm hover:border-blue-400 transition">🏔️ ភ្នំ</button>
-                <button class="flex-none px-6 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-sm hover:border-blue-400 transition">🌊 សមុទ្រ</button>
-                <button class="flex-none px-6 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-sm hover:border-blue-400 transition">⛺️ បោះតង់</button>
+                <button
+                    class="flex-none px-6 py-2 bg-blue-600 text-white rounded-full text-sm font-bold shadow-md shadow-blue-100">ទាំងអស់</button>
+                <button
+                    class="flex-none px-6 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-sm hover:border-blue-400 transition">☕️
+                    កាហ្វេ</button>
+                <button
+                    class="flex-none px-6 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-sm hover:border-blue-400 transition">🏔️
+                    ភ្នំ</button>
+                <button
+                    class="flex-none px-6 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-sm hover:border-blue-400 transition">🌊
+                    សមុទ្រ</button>
+                <button
+                    class="flex-none px-6 py-2 bg-white border border-gray-200 text-gray-600 rounded-full text-sm hover:border-blue-400 transition">⛺️
+                    បោះតង់</button>
             </div>
 
-            <div class="flex overflow-x-auto gap-5 px-6 mt-8 hide-scrollbar" >
-                <div class="flex-none w-64 md:w-80 h-80 md:h-96 bg-gray-200 rounded-[35px] relative overflow-hidden group shadow-md">
+            <div class="flex overflow-x-auto gap-5 px-6 mt-8 hide-scrollbar">
+                <div
+                    class="flex-none w-64 md:w-80 h-80 md:h-96 bg-gray-200 rounded-[35px] relative overflow-hidden group shadow-md">
                     <a href="../UI/placesDetails.html">
-                                            <img src="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=600&q=80"  class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <img src="https://images.unsplash.com/photo-1540611025311-01df3cef54b5?auto=format&fit=crop&w=600&q=80"
+                            class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500">
 
                     </a>
-                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent text-white">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent text-white">
                         <p class="font-bold text-lg md:text-xl">ប្រាសាទអង្គរវត្ត</p>
                         <p class="opacity-80 text-xs md:text-sm">សៀមរាប</p>
                     </div>
                 </div>
-                <div class="flex-none w-64 md:w-80 h-80 md:h-96 bg-gray-200 rounded-[35px] relative overflow-hidden group shadow-md">
-                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500">
-                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent text-white">
+                <div
+                    class="flex-none w-64 md:w-80 h-80 md:h-96 bg-gray-200 rounded-[35px] relative overflow-hidden group shadow-md">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80"
+                        class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent text-white">
                         <p class="font-bold text-lg md:text-xl">គិរីរម្យ</p>
                         <p class="opacity-80 text-xs md:text-sm">កំពង់ស្ពឺ</p>
                     </div>
@@ -92,32 +135,41 @@
                 <h2 class="text-xl md:text-2xl font-bold text-gray-800">កន្លែងអែមៗ 🔥</h2>
                 <span class="text-blue-500 text-sm font-bold italic">Admin Recommend</span>
             </div>
-            
+
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                <div class="bg-white rounded-3xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                <div
+                    class="bg-white rounded-3xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
                     <div class="aspect-square bg-gray-200 relative overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-                        <button class="absolute top-3 right-3 p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:text-red-500 transition">❤️</button>
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=400&q=80"
+                            class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                        <button
+                            class="absolute top-3 right-3 p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:text-red-500 transition">❤️</button>
                     </div>
                     <div class="p-4">
                         <p class="text-sm md:text-base font-bold truncate">Brown Roastery</p>
                         <p class="text-[10px] md:text-xs text-gray-400">ភ្នំពេញ</p>
                     </div>
                 </div>
-                <div class="bg-white rounded-3xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                <div
+                    class="bg-white rounded-3xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
                     <div class="aspect-square bg-gray-200 relative overflow-hidden">
-                        <img src="https://images.deliveryhero.io/image/fd-kh/kh-logos/jisj-logo.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-                        <button class="absolute top-3 right-3 p-2 bg-white/20 backdrop-blur-md rounded-full text-white/50">❤️</button>
+                        <img src="https://images.deliveryhero.io/image/fd-kh/kh-logos/jisj-logo.jpg"
+                            class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                        <button
+                            class="absolute top-3 right-3 p-2 bg-white/20 backdrop-blur-md rounded-full text-white/50">❤️</button>
                     </div>
                     <div class="p-4">
                         <p class="text-sm md:text-base font-bold truncate">Tube Coffee</p>
                         <p class="text-[10px] md:text-xs text-gray-400">សៀមរាប</p>
                     </div>
                 </div>
-                <div class="hidden md:block bg-white rounded-3xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
+                <div
+                    class="hidden md:block bg-white rounded-3xl shadow-sm overflow-hidden border border-gray-100 hover:shadow-xl transition duration-300">
                     <div class="aspect-square bg-gray-200 relative overflow-hidden">
-                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/263464900.jpg?k=23cd9816aa880a62bd4a6a4b489cbfd39c4470d39b5ed97848a926c55990dbfe&o=" class="w-full h-full object-cover">
-                        <button class="absolute top-3 right-3 p-2 bg-white/20 backdrop-blur-md rounded-full text-white">❤️</button>
+                        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/263464900.jpg?k=23cd9816aa880a62bd4a6a4b489cbfd39c4470d39b5ed97848a926c55990dbfe&o="
+                            class="w-full h-full object-cover">
+                        <button
+                            class="absolute top-3 right-3 p-2 bg-white/20 backdrop-blur-md rounded-full text-white">❤️</button>
                     </div>
                     <div class="p-4">
                         <p class="text-sm md:text-base font-bold truncate">Knai Bang Chatt</p>
@@ -126,20 +178,27 @@
                 </div>
             </div>
         </section>
+        <a href="../UI/search.html">
+            <div class="fixed bottom-6 left-0 right-0 px-6 z-40">
 
-        <div class="fixed bottom-6 left-0 right-0 px-6 z-40">
-            <div class="max-w-xl mx-auto bg-white rounded-full shadow-2xl border border-blue-50 flex items-center px-5 py-4 transition-all focus-within:ring-4 ring-blue-500/20">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                <a href="../UI/search.html">
-                                    <input disabled type="text" placeholder="ស្វែងរកកន្លែងបន្ទាប់របស់អ្នក..." class="ml-3 bg-transparent outline-none w-full text-sm md:text-base font-medium text-gray-700">
+                <div
+                    class="max-w-xl mx-auto bg-white rounded-full shadow-2xl border border-blue-50 flex items-center px-5 py-4 transition-all focus-within:ring-4 ring-blue-500/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
 
-                </a>
+                    <input  type="text" placeholder="ស្វែងរកកន្លែងបន្ទាប់របស់អ្នក..."
+                        class="ml-3 bg-transparent outline-none w-full text-sm md:text-base font-medium text-gray-700">
+
+
+                </div>
+
             </div>
-        </div>
-
-    </div> <script>
+        </a>
+    </div>
+    <script>
         function toggleMenu() {
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('sidebar-overlay');
@@ -157,4 +216,5 @@
     </script>
 
 </body>
+
 </html>
